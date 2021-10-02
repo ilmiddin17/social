@@ -55,7 +55,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,3 +133,8 @@ EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 LOGIN_REDIRECT_URL='account:dashboard'
 LOGIN_URL='account:login'
 LOGOUT_URL='account:logout'
+
+MEDIA_URL='media/'
+MEDIA_ROOT=[
+    BASE_DIR/'media'
+]

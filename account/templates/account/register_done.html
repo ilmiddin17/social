@@ -1,0 +1,8 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+<h3>Welcome {{new_user.username|title}}</h3>
+<p>Now you can <a href="{%url 'account:login'%}">login here.</a></p>
+
+{%endblock content%}
