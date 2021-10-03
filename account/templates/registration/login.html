@@ -2,25 +2,22 @@
 
 {%block content%}
 
-<h3>
-	Login
-</h3>
-{%if form.errors%}
+<div style="margin-left:40px;">
+	<h3>Login</h3>
+	{%if form.errors%}
 	<p>
 		Your username and password didn't match.
 		Please try again.
 	</p>
-{%else%}
-	<p>Use the following form to log in. If you don't have an account <a href="{%url 'account:register'%}">register here</a></p>
-{%endif%}
-<div class="loginform">
-	<div class="loginform">
-	<form method="post" class="">
-	{%csrf_token%}
-	{{form.as_p}}
-	<input type="hidden" name="next" value="{{next}}">
-	<p><input type="submit" name="" value="Login" class="btn btn-primary"></p>
-</form>
+	{%else%}
+		<p>Use the following form to log in. If you don't have an account <a href="{%url 'account:register'%}">register here</a></p>
+	{%endif%}
+		<form method="post" class="">
+		{%csrf_token%}
+		{{form.as_p}}
+		<input type="hidden" name="next" value="{{next}}">
+		<p><input type="submit" name="" value="Login" class="btn btn-primary"></p>
+	</form>
+	<p><a href="{% url 'account:password_reset'%}">Forgetten your password?</a></p>
 </div>
-<p><a href="{% url 'account:password_reset'%}">Forgetten your password?</a></p>
 {%endblock content%}

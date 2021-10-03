@@ -24,4 +24,7 @@ class UserEdit(forms.ModelForm):
 class ProfileEdit(forms.ModelForm):
 	class Meta:
 		model=Profile
+		widgets = {
+            'date_of_birth': forms.TextInput(attrs={'placeholder': '1999-07-23'}),
+        }
 		fields=('date_of_birth', 'photo')
