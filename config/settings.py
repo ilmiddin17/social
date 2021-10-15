@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'images.apps.ImageConfig',
+    'images.apps.ImagesConfig',
 
     #third-party
     'social_django',
@@ -150,3 +150,5 @@ AUTHENTICATION_BACKENDS=[
     'account.authentication.EmailAuthBackend',
 
 ]
+
+
